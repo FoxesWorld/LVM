@@ -1,11 +1,11 @@
-package org.example;
+package org.foxesworld;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import org.example.lottie.AnimationWebView;
-import org.example.lottie.config.LottieAnimationConfig;
+import org.foxesworld.lvm.AnimationWebView;
+import org.foxesworld.lvm.config.LottieAnimationConfig;
 
 public class LottieDemoApp extends Application {
 

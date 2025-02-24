@@ -1,4 +1,4 @@
-package org.example.lottie.config;
+package org.foxesworld.lvm.config;
 public class LottieAnimationConfig {
     private String bodymovinJsResourcePath;
     private String animationJsonResourcePath;

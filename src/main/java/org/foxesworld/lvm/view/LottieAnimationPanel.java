@@ -1,14 +1,15 @@
-package org.example.lottie.view;
+package org.foxesworld.lvm.view;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.Scene;
-import org.example.lottie.config.LottieAnimationConfig;
-import org.example.lottie.AnimationWebView;
+import org.foxesworld.lvm.config.LottieAnimationConfig;
+import org.foxesworld.lvm.AnimationWebView;
 
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 
+@Deprecated
 public class LottieAnimationPanel extends JPanel {
     private final JFXPanel jfxPanel;
     private final LottieAnimationConfig config;
