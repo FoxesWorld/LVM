@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lottie Animation</title>
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+        #{{containerId}} { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+<div id="{{containerId}}"></div>
+<script>
+    {{bodymovinJs}}
+</script>
+<script>
+    // Парсинг данных анимации
+    var animationData = {{animationJson}};
+    var animation = bodymovin.loadAnimation({
+        container: document.getElementById('{{containerId}}'),
+        renderer: '{{renderer}}',
+        loop: {{loop}},
+    autoplay: {{autoplay}},
+    animationData: animationData
+    });
+</script>
+</body>
+</html>

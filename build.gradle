@@ -1,0 +1,69 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+        maven {
+            url "https://jcenter.bintray.com/"
+        }
+        maven {
+            url "https://jitpack.io/"
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/FoxesWorld/FoxesLauncher")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME_GITHUB")
+                password = project.findProperty("gpr.token") ?: System.getenv("TOKEN_GITHUB")
+            }
+        }
+    }
+    dependencies {
+        classpath "com.github.johnrengelman:shadow:8.1.0"
+    }
+}
+
+plugins {
+    id 'java'
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "8.1.0"
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+application {
+    mainClass = properties.getProperty('project.mainclass')
+}
+
+
+group=properties.getProperty('project.group')
+version=properties.getProperty('project.version')
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.graalvm.sdk:graal-sdk:22.3.0'
+
+    implementation "org.openjfx:javafx-controls:17.0.2"
+    implementation "org.openjfx:javafx-web:18.0.1"
+
+    implementation 'org.graalvm.truffle:truffle-api:22.3.0'
+
+    // Если используете Graal.js
+    implementation 'org.graalvm.js:js:22.3.0'
+    implementation 'org.fusesource.jansi:jansi:2.4.0'
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+}
+
+test {
+    useJUnitPlatform()
+}
