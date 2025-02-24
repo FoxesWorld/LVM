@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    </style>
+</head>
+<body>
+<div id="{{containerId}}"></div>
+<script>
+    {{bodymovinJs}}
+</script>
+<script>
+    var animationData = {{animationJson}};
+    var container = document.getElementById('{{containerId}}');
+    var animation = bodymovin.loadAnimation({
+        container: container,
+        renderer: '{{renderer}}',
+        loop: {{loop}},
+    autoplay: {{autoplay}},
+    animationData: animationData
+    });
+
+    var lottieEvents = [
+        'complete',
+        'loopComplete',
+        'enterFrame',
+        'segmentStart',
+        'data_ready',
+        'data_failed',
+        'loaded_images',
+        'DOMLoaded'
+    ];
+
+    lottieEvents.forEach(function(eventName) {
+        animation.addEventListener(eventName, function(event) {
+            if (typeof animationCallback !== 'undefined' && typeof animationCallback.onEvent === 'function') {
+                animationCallback.onEvent(eventName, JSON.stringify(event, null, 2));
+            } else {
+                console.error("Lottie event [" + eventName + "] occurred:", event);
+            }
+        });
+    });
+
+    container.addEventListener('click', function(event) {
+        if (typeof animationCallback !== 'undefined' && typeof animationCallback.onClick === 'function') {
+            animationCallback.onClick(JSON.stringify({
+                x: event.clientX,
+                y: event.clientY,
+                timestamp: event.timeStamp
+            }, null, 2));
+        } else {
+            console.log("Lottie click event:", event);
+        }
+    });
+
+    container.addEventListener('mouseenter', function(event) {
+        if (typeof animationCallback !== 'undefined' && typeof animationCallback.onHover === 'function') {
+            animationCallback.onHover(JSON.stringify({ type: 'mouseenter' }, null, 2));
+        } else {
+            console.log("Lottie hover (mouseenter) event:", event);
+        }
+    });
+
+    container.addEventListener('mouseleave', function(event) {
+        if (typeof animationCallback !== 'undefined' && typeof animationCallback.onHover === 'function') {
+            animationCallback.onHover(JSON.stringify({ type: 'mouseleave' }, null, 2));
+        } else {
+            console.log("Lottie hover (mouseleave) event:", event);
+        }
+    });
+
+</script>
+</body>
+</html>
