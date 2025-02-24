@@ -1,4 +1,4 @@
-package org.foxesworld.lvm.loader;
+package org.foxesworld.lvm.resourceLoader;
 
 /**
  * Interface for resource loading.

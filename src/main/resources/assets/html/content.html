@@ -1,10 +1,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Lottie Animation</title>
     <style>
         html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        #{{containerId}} { width: 100%; height: 100%; }
     </style>
 </head>
 <body>
@@ -13,7 +11,6 @@
     {{bodymovinJs}}
 </script>
 <script>
-    // Парсинг данных анимации
     var animationData = {{animationJson}};
     var animation = bodymovin.loadAnimation({
         container: document.getElementById('{{containerId}}'),
@@ -22,6 +19,28 @@
     autoplay: {{autoplay}},
     animationData: animationData
     });
+
+    var lottieEvents = [
+        'complete',
+        'loopComplete',
+        'enterFrame',
+        'segmentStart',
+        'data_ready',
+        'data_failed',
+        'loaded_images',
+        'DOMLoaded'
+    ];
+
+    lottieEvents.forEach(function(eventName) {
+        animation.addEventListener(eventName, function(event) {
+            if (typeof animationCallback !== 'undefined' && typeof animationCallback.onEvent === 'function') {
+                animationCallback.onEvent(eventName, JSON.stringify(event, null, 2));
+            } else {
+                console.log("Lottie event [" + eventName + "] occurred:", event);
+            }
+        });
+    });
+
 </script>
 </body>
 </html>

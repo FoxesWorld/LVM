@@ -1,7 +1,7 @@
 package org.foxesworld.lvm;
 
 import org.foxesworld.lvm.config.LottieAnimationConfig;
-import org.foxesworld.lvm.loader.ResourceLoader;
+import org.foxesworld.lvm.resourceLoader.ResourceLoader;
 
 import java.util.HashMap;
 import java.util.Map;

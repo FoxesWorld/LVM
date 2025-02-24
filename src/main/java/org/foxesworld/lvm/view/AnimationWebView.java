@@ -1,10 +1,14 @@
-package org.foxesworld.lvm;
+package org.foxesworld.lvm.view;
 
+import javafx.concurrent.Worker;
 import javafx.scene.layout.Region;
 import javafx.scene.web.WebView;
+import netscape.javascript.JSObject;
+import org.foxesworld.lvm.AnimationCallback;
+import org.foxesworld.lvm.HtmlContentBuilder;
 import org.foxesworld.lvm.config.LottieAnimationConfig;
-import org.foxesworld.lvm.loader.DefaultResourceLoader;
-import org.foxesworld.lvm.loader.ResourceLoader;
+import org.foxesworld.lvm.resourceLoader.DefaultResourceLoader;
+import org.foxesworld.lvm.resourceLoader.ResourceLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -107,5 +111,17 @@ public class AnimationWebView extends Region {
         }
         this.config = newConfig;
         loadAnimation();
+    }
+
+    public void setAnimationCallback(AnimationCallback callback) {
+        if (callback == null) {
+            throw new IllegalArgumentException("AnimationCallback must not be null");
+        }
+        webView.getEngine().getLoadWorker().stateProperty().addListener((obs, oldState, newState) -> {
+            if (newState == Worker.State.SUCCEEDED) {
+                JSObject window = (JSObject) webView.getEngine().executeScript("window");
+                window.setMember("animationCallback", callback);
+            }
+        });
     }
 }
