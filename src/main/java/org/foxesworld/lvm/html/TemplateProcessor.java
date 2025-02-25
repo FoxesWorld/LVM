@@ -1,4 +1,4 @@
-package org.foxesworld.lvm;
+package org.foxesworld.lvm.html;
 
 import java.util.Map;
 import java.util.Objects;

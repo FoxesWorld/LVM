@@ -7,6 +7,6 @@ import java.io.InputStream;
  *
  * @param <T> the type of the converted result
  */
-interface ResourceConverter<T> {
+interface IResourceConverter<T> {
     T convert(InputStream is) throws Exception;
 }

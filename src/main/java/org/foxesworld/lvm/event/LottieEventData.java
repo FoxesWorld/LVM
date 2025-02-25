@@ -1,4 +1,4 @@
-package org.foxesworld.lvm;
+package org.foxesworld.lvm.event;
 
 @SuppressWarnings("unused")
 public class LottieEventData {

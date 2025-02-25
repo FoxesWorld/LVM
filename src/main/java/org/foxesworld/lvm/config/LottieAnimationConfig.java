@@ -1,6 +1,6 @@
 package org.foxesworld.lvm.config;
 public class LottieAnimationConfig {
-    private String bodymovinJsResourcePath;
+    private final String bodymovinJsResourcePath;
     private String animationJsonResourcePath;
     private String containerId;
     private String renderer;

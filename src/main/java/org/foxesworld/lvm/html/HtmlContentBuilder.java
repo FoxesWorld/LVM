@@ -1,4 +1,4 @@
-package org.foxesworld.lvm;
+package org.foxesworld.lvm.html;
 
 import org.foxesworld.lvm.config.LottieAnimationConfig;
 import org.foxesworld.lvm.resourceLoader.IResourceLoader;

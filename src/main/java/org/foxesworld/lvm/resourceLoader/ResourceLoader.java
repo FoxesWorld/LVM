@@ -31,19 +31,19 @@ public class ResourceLoader implements IResourceLoader {
     /**
      * Registers converters for different resource types.
      */
-    private static final Map<Class<?>, ResourceConverter<?>> converters = new HashMap<>();
+    private static final Map<Class<?>, IResourceConverter<?>> converters = new HashMap<>();
 
     static {
         // Converter for text resources (UTF-8)
-        converters.put(String.class, (ResourceConverter<String>) is -> {
+        converters.put(String.class, (IResourceConverter<String>) is -> {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))) {
                 return reader.lines().collect(Collectors.joining("\n"));
             }
         });
         // Converter for binary resources
-        converters.put(byte[].class, (ResourceConverter<byte[]>) InputStream::readAllBytes);
+        converters.put(byte[].class, (IResourceConverter<byte[]>) InputStream::readAllBytes);
         // Converter for audio resources (OGG). The stream is not closed as it is needed for further processing.
-        converters.put(AudioInputStream.class, (ResourceConverter<AudioInputStream>) is -> {
+        converters.put(AudioInputStream.class, (IResourceConverter<AudioInputStream>) is -> {
             VorbisAudioFileReader reader = new VorbisAudioFileReader();
             return reader.getAudioInputStream(is);
         });
@@ -71,7 +71,7 @@ public class ResourceLoader implements IResourceLoader {
     public <T> T loadResource(String resourcePath, Class<T> type) {
         logger.debug("Requesting resource load: {} (Type: {})", resourcePath, type.getSimpleName());
         @SuppressWarnings("unchecked")
-        ResourceConverter<T> converter = (ResourceConverter<T>) converters.get(type);
+        IResourceConverter<T> converter = (IResourceConverter<T>) converters.get(type);
         if (converter == null) {
             logger.error("Attempt to load unsupported resource type: {}", type.getName());
             throw new IllegalArgumentException("Resource type not supported: " + type.getName());

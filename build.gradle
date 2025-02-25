@@ -20,23 +20,27 @@ buildscript {
                 password = project.findProperty("gpr.token") ?: System.getenv("TOKEN_GITHUB")
             }
         }
-    }
-    dependencies {
-        classpath "com.github.johnrengelman:shadow:8.1.0"
+
+        dependencies {
+            classpath 'com.gluonhq:gluonfx-gradle-plugin:1.0.25'
+        }
     }
 }
+
 
 plugins {
     id 'java'
     id 'application'
-    id "com.github.johnrengelman.shadow" version "8.1.0"
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id("com.gluonhq.gluonfx-gradle-plugin") version "1.0.25"
 }
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def mainClassValue = properties.getProperty('project.mainclass')
 
 application {
-    mainClass = properties.getProperty('project.mainclass')
+    mainClass = mainClassValue
 }
 
 
@@ -46,6 +50,13 @@ version=properties.getProperty('project.version')
 
 repositories {
     mavenCentral()
+}
+
+javafx {
+    // Specify the JavaFX version (ensure compatibility with your project and GraalVM)
+    version = '17.0.2'
+    // List the required JavaFX modules for your application
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.base' ]
 }
 
 dependencies {
@@ -65,6 +76,7 @@ dependencies {
     implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
     implementation 'com.github.stephengold:j-ogg-vorbis:1.0.4'
 }
+
 
 test {
     useJUnitPlatform()

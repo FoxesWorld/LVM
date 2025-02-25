@@ -1,4 +1,4 @@
-package org.foxesworld.lvm;
+package org.foxesworld.lvm.event;
 
 /**
  * Callback interface for handling Lottie animation events.

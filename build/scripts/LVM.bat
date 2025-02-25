@@ -68,11 +68,11 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\LVM-1.0.0.jar;%APP_HOME%\lib\js-22.3.0.jar;%APP_HOME%\lib\regex-22.3.0.jar;%APP_HOME%\lib\truffle-api-22.3.0.jar;%APP_HOME%\lib\graal-sdk-22.3.0.jar;%APP_HOME%\lib\javafx-web-18.0.1.jar;%APP_HOME%\lib\javafx-controls-18.0.1.jar;%APP_HOME%\lib\javafx-media-18.0.1.jar;%APP_HOME%\lib\javafx-graphics-18.0.1.jar;%APP_HOME%\lib\icu4j-71.1.jar;%APP_HOME%\lib\javafx-base-18.0.1.jar
+set CLASSPATH=%APP_HOME%\lib\LVM-1.3.0.jar;%APP_HOME%\lib\js-22.3.0.jar;%APP_HOME%\lib\regex-22.3.0.jar;%APP_HOME%\lib\truffle-api-22.3.0.jar;%APP_HOME%\lib\graal-sdk-22.3.0.jar;%APP_HOME%\lib\javafx-fxml-17.0.2-win.jar;%APP_HOME%\lib\javafx-web-17.0.2-win.jar;%APP_HOME%\lib\javafx-controls-17.0.2-win.jar;%APP_HOME%\lib\javafx-media-17.0.2-win.jar;%APP_HOME%\lib\javafx-graphics-17.0.2-win.jar;%APP_HOME%\lib\javafx-base-17.0.2-win.jar;%APP_HOME%\lib\gson-2.11.0.jar;%APP_HOME%\lib\jansi-2.4.0.jar;%APP_HOME%\lib\log4j-slf4j2-impl-2.20.0.jar;%APP_HOME%\lib\slf4j-api-2.0.9.jar;%APP_HOME%\lib\log4j-core-2.20.0.jar;%APP_HOME%\lib\j-ogg-vorbis-1.0.4.jar;%APP_HOME%\lib\error_prone_annotations-2.27.0.jar;%APP_HOME%\lib\icu4j-71.1.jar;%APP_HOME%\lib\log4j-api-2.20.0.jar
 
 
 @rem Execute LVM
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %LVM_OPTS%  -classpath "%CLASSPATH%" org.example.LottieDemoApp %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %LVM_OPTS%  -classpath "%CLASSPATH%" org.foxesworld.LottieDemoApp %*
 
 :end
 @rem End local scope for the variables with windows NT shell

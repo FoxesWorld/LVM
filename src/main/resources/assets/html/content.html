@@ -1,9 +1,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <style>
-        html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-    </style>
+    <style>html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }</style>
 </head>
 <body>
 <div id="{{containerId}}"></div>
@@ -11,9 +9,9 @@
     {{bodymovinJs}}
 </script>
 <script>
-    var animationData = {{animationJson}};
-    var container = document.getElementById('{{containerId}}');
-    var animation = bodymovin.loadAnimation({
+    const animationData = {{animationJson}};
+    const container = document.getElementById('{{containerId}}');
+    const lottieAnimation = bodymovin.loadAnimation({
         container: container,
         renderer: '{{renderer}}',
         loop: {{loop}},
@@ -33,7 +31,7 @@
     ];
 
     lottieEvents.forEach(function(eventName) {
-        animation.addEventListener(eventName, function(event) {
+        lottieAnimation.addEventListener(eventName, function(event) {
             if (typeof animationCallback !== 'undefined' && typeof animationCallback.onEvent === 'function') {
                 animationCallback.onEvent(eventName, JSON.stringify(event, null, 2));
             } else {
@@ -69,7 +67,6 @@
             console.log("Lottie hover (mouseleave) event:", event);
         }
     });
-
 </script>
 </body>
 </html>
