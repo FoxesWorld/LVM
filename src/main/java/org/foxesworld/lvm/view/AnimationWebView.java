@@ -25,12 +25,15 @@ public class AnimationWebView extends Region {
         this.config = config;
         this.soundPlayer = new SoundPlayer();
         this.webView = new WebView();
+
+
         this.htmlContentBuilder = new HtmlContentBuilder(DEFAULT_HTML_TEMPLATE_PATH);
         getChildren().add(webView);
         webView.prefWidthProperty().bind(widthProperty());
         webView.prefHeightProperty().bind(heightProperty());
         loadAnimation();
     }
+
 
     protected void loadAnimation() {
         try {

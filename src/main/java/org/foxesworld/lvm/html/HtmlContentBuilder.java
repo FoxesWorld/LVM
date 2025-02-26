@@ -44,7 +44,7 @@ public class HtmlContentBuilder implements IResourceLoader {
         Objects.requireNonNull(config, "LottieAnimationConfig must not be null");
         try {
             String template = loadResource(contentFile, String.class);
-            Map<String, String> values = new HashMap<>();
+            Map<String, Object> values = new HashMap<>();
             values.put("containerId", config.getContainerId());
             values.put("bodymovinJs", loadResource(config.getBodymovinJsResourcePath(), String.class));
             values.put("animationJson", loadResource(config.getAnimationJsonResourcePath(), String.class));

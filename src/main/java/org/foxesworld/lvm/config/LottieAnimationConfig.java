@@ -8,7 +8,7 @@ public class LottieAnimationConfig {
     private boolean autoplay;
 
     public LottieAnimationConfig() {
-        this.bodymovinJsResourcePath = "/js/lottie.min.js";
+        this.bodymovinJsResourcePath = "/js/lottie.js";
         this.animationJsonResourcePath = "/test.json";
         this.containerId = "lottie";
         this.renderer = "svg";

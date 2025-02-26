@@ -1,25 +1,34 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <style>html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }</style>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: mediumvioletred;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-<div id="{{containerId}}"></div>
+<div id="${containerId}"></div>
 <script>
-    {{bodymovinJs}}
+    ${bodymovinJs}
 </script>
 <script>
-    const animationData = {{animationJson}};
-    const container = document.getElementById('{{containerId}}');
+    const animationData = ${animationJson};
+    const container = document.getElementById('${containerId}');
     const lottieAnimation = bodymovin.loadAnimation({
         container: container,
-        renderer: '{{renderer}}',
-        loop: {{loop}},
-    autoplay: {{autoplay}},
-    animationData: animationData
+        renderer: '${renderer}',
+        loop: getBool('${loop}'),
+        autoplay: getBool('${autoplay}'),
+        animationData: animationData
     });
 
-    var lottieEvents = [
+    const lottieEvents = [
         'complete',
         'loopComplete',
         'enterFrame',
@@ -67,6 +76,17 @@
             console.log("Lottie hover (mouseleave) event:", event);
         }
     });
+
+    function getBool(value){
+        switch(value) {
+            case 'true':
+                return true;
+            case 'false':
+                return false;
+            default:
+                return false;
+        }
+    }
 </script>
 </body>
 </html>
