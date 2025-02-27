@@ -1,3 +1,4 @@
+/* Стили для слайдера анимации */
 .video-slider .track {
     -fx-background-color: #e0e0e0;
     -fx-background-radius: 5px;
@@ -13,11 +14,11 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 2, 0.0, 0, 1);
 }
 
-/* Убираем стандартные эффекты при наведении */
 .video-slider .thumb:hover {
     -fx-background-color: #005fa3;
 }
 
+/* Стили для стандартных кнопок */
 .button {
     -fx-background-color: linear-gradient(to bottom, #4CAF50, #2E7D32);
     -fx-text-fill: white;
@@ -39,4 +40,29 @@
 .button:pressed {
     -fx-background-color: linear-gradient(to bottom, #1B5E20, #388E3C);
     -fx-translate-y: 2px;
+}
+
+/* Стили для панели управления */
+.control-panel {
+    -fx-border-color: gray;
+    -fx-border-width: 2px;
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 10px;
+}
+
+/* Стили для кнопки-переключателя (воспроизведение/пауза) */
+.toggle-button-playing {
+    -fx-background-radius: 5px;
+    -fx-background-color: #f44336; /* Красный фон для состояния воспроизведения */
+}
+
+.toggle-button-paused {
+    -fx-background-radius: 5px;
+    -fx-background-color: #4CAF50; /* Зеленый фон для состояния паузы */
+}
+
+/* Стили для кнопок с иконками */
+.icon-button {
+    -fx-background-radius: 5px;
+    -fx-background-color: #eee;
 }
