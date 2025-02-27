@@ -113,7 +113,6 @@ public class AnimationWebView extends Region {
      * @param progress значение от 0 до 1, где 0 - начало, 1 - конец анимации.
      */
     public void setAnimationProgress(float progress) {
-        // Ограничиваем значение прогресса диапазоном от 0 до 1
         if (progress < 0) progress = 0;
         if (progress > 1) progress = 1;
         try {
@@ -128,6 +127,7 @@ public class AnimationWebView extends Region {
             logger.error("Failed to set animation progress", e);
         }
     }
+
 
     public WebView getWebView() {
         return webView;

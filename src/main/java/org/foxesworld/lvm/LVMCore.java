@@ -10,7 +10,6 @@ public class LVMCore extends AnimationWebView implements AnimationController {
 
     private static final Logger logger = LoggerFactory.getLogger(LVMCore.class);
     protected String animPath;
-
     public LVMCore(LottieAnimationConfig config) {
         super(config);
     }

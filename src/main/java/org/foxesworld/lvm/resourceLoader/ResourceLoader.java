@@ -39,15 +39,27 @@ public class ResourceLoader implements IResourceLoader {
                 return reader.lines().collect(Collectors.joining("\n"));
             }
         });
-        // Converter for binary resources
-        converters.put(byte[].class, (IResourceConverter<byte[]>) InputStream::readAllBytes);
+
+        // Converter for binary resources (альтернатива readAllBytes в Java 8)
+        converters.put(byte[].class, (IResourceConverter<byte[]>) is -> {
+            ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+            byte[] data = new byte[8192];
+            int bytesRead;
+            while ((bytesRead = is.read(data, 0, data.length)) != -1) {
+                buffer.write(data, 0, bytesRead);
+            }
+            return buffer.toByteArray();
+        });
+
         // Converter for audio resources (OGG). The stream is not closed as it is needed for further processing.
         converters.put(AudioInputStream.class, (IResourceConverter<AudioInputStream>) is -> {
             VorbisAudioFileReader reader = new VorbisAudioFileReader();
             return reader.getAudioInputStream(is);
         });
+
         logLoadedTypes();
     }
+
 
     /**
      * Logs the registered converters as a sorted list of type names.

@@ -49,6 +49,13 @@
         });
     });
 
+    lottieAnimation.addEventListener('enterFrame', function(event) {
+        if (typeof animationCallback !== 'undefined' && typeof animationCallback.onAnimationUpdate === 'function') {
+            let progress = event.currentFrame / event.totalFrames;
+            animationCallback.onAnimationUpdate(progress);
+        }
+    });
+
     container.addEventListener('click', function(event) {
         if (typeof animationCallback !== 'undefined' && typeof animationCallback.onClick === 'function') {
             animationCallback.onClick(JSON.stringify({

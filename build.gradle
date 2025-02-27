@@ -1,17 +1,9 @@
 buildscript {
     repositories {
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-        maven {
-            url "https://oss.sonatype.org/content/repositories/snapshots"
-        }
-        maven {
-            url "https://jcenter.bintray.com/"
-        }
-        maven {
-            url "https://jitpack.io/"
-        }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url "https://jcenter.bintray.com/" }
+        maven { url "https://jitpack.io/" }
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/FoxesWorld/FoxesLauncher")
@@ -20,20 +12,16 @@ buildscript {
                 password = project.findProperty("gpr.token") ?: System.getenv("TOKEN_GITHUB")
             }
         }
-
-        dependencies {
-            classpath 'com.gluonhq:gluonfx-gradle-plugin:1.0.25'
-        }
     }
 }
-
 
 plugins {
     id 'java'
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.13'
-    id("com.gluonhq.gluonfx-gradle-plugin") version "1.0.25"
 }
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
@@ -43,40 +31,24 @@ application {
     mainClass = mainClassValue
 }
 
-
-group=properties.getProperty('project.group')
-version=properties.getProperty('project.version')
-
+group = properties.getProperty('project.group')
+version = properties.getProperty('project.version')
 
 repositories {
     mavenCentral()
 }
 
-javafx {
-    // Specify the JavaFX version (ensure compatibility with your project and GraalVM)
-    version = '17.0.2'
-    // List the required JavaFX modules for your application
-    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.base' ]
-}
-
 dependencies {
-    //implementation 'org.graalvm.sdk:graal-sdk:22.3.0'
-
-    implementation "org.openjfx:javafx-controls:17.0.2"
-    implementation "org.openjfx:javafx-web:23.0.1"
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.11.0'
-
-    //implementation 'org.graalvm.truffle:truffle-api:22.3.0'
     implementation 'org.freemarker:freemarker:2.3.32'
-    //implementation 'org.graalvm.js:js:22.3.0'
-    implementation 'org.controlsfx:controlsfx:11.2.0'
+
+    implementation 'org.controlsfx:controlsfx:8.40.14'
     implementation 'org.fusesource.jansi:jansi:2.4.0'
     implementation 'org.slf4j:slf4j-api:2.0.9'
     implementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
     implementation 'com.github.stephengold:j-ogg-vorbis:1.0.4'
 }
-
 
 test {
     useJUnitPlatform()
