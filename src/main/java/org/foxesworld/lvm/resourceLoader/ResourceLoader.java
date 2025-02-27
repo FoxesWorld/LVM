@@ -5,9 +5,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.sound.sampled.AudioInputStream;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.HashMap;
@@ -106,12 +105,36 @@ public class ResourceLoader implements IResourceLoader {
      * @throws IllegalStateException if the resource is not found
      */
     private InputStream loadResourceAsStream(String resourcePath) {
+        // Если путь начинается с "file:", загружаем ресурс напрямую с диска
+        if (resourcePath.startsWith("file:")) {
+            try {
+                URL url = new URL(resourcePath);
+                return url.openStream();
+            } catch (IOException e) {
+                logger.error("Failed to load resource from disk: {}", resourcePath, e);
+                throw new IllegalStateException("Error loading resource: " + resourcePath, e);
+            }
+        }
+        // Если ресурс не с диска, используем базовый путь
         String fullPath = ASSET_BASE_PATH + resourcePath;
         InputStream is = ResourceLoader.class.getClassLoader().getResourceAsStream(fullPath);
+        if (is == null) {
+            // Ресурс не найден в classpath, проверяем наличие файла на диске по fullPath
+            File file = new File(fullPath);
+            if (file.exists() && file.isFile()) {
+                try {
+                    is = new FileInputStream(file);
+                } catch (FileNotFoundException e) {
+                    logger.error("File not found on disk: {}", fullPath, e);
+                    throw new IllegalStateException("Resource not found on disk: " + fullPath, e);
+                }
+            }
+        }
         if (is == null) {
             logger.error("Resource not found: {}", fullPath);
             throw new IllegalStateException("Resource not found: " + fullPath);
         }
         return is;
     }
+
 }

@@ -26,16 +26,15 @@ public class AnimationWebView extends Region {
         this.soundPlayer = new SoundPlayer();
         this.webView = new WebView();
 
-
         this.htmlContentBuilder = new HtmlContentBuilder(DEFAULT_HTML_TEMPLATE_PATH);
         getChildren().add(webView);
         webView.prefWidthProperty().bind(widthProperty());
         webView.prefHeightProperty().bind(heightProperty());
-        loadAnimation();
+        loadAnimation(this.config.getAnimationJsonResourcePath());
     }
 
-
-    protected void loadAnimation() {
+    protected void loadAnimation(String animationUri) {
+        config.setAnimationJsonResourcePath(animationUri);
         try {
             String htmlContent = htmlContentBuilder.buildHtmlContent(config);
             webView.getEngine().loadContent(htmlContent);
@@ -48,7 +47,7 @@ public class AnimationWebView extends Region {
     protected void updateConfig(LottieAnimationConfig newConfig) {
         if (newConfig == null) throw new IllegalArgumentException("New configuration must not be null");
         this.config = newConfig;
-        loadAnimation();
+        loadAnimation(this.config.getAnimationJsonResourcePath());
     }
 
     protected void setAnimationCallback(AnimationCallback callback) {
@@ -107,5 +106,38 @@ public class AnimationWebView extends Region {
         } catch (Exception e) {
             logger.error("Failed to set animation speed", e);
         }
+    }
+
+    /**
+     * Устанавливает прогресс анимации.
+     * @param progress значение от 0 до 1, где 0 - начало, 1 - конец анимации.
+     */
+    public void setAnimationProgress(float progress) {
+        // Ограничиваем значение прогресса диапазоном от 0 до 1
+        if (progress < 0) progress = 0;
+        if (progress > 1) progress = 1;
+        try {
+            webView.getEngine().executeScript(
+                    "if (typeof lottieAnimation !== 'undefined' && lottieAnimation.totalFrames) {" +
+                            "    var frame = Math.floor(lottieAnimation.totalFrames * " + progress + ");" +
+                            "    lottieAnimation.goToAndStop(frame, true);" +
+                            "}"
+            );
+            logger.debug("setAnimationProgress executed with progress: {}", progress);
+        } catch (Exception e) {
+            logger.error("Failed to set animation progress", e);
+        }
+    }
+
+    public WebView getWebView() {
+        return webView;
+    }
+
+    public LottieAnimationConfig getConfig() {
+        return config;
+    }
+
+    public HtmlContentBuilder getHtmlContentBuilder() {
+        return htmlContentBuilder;
     }
 }

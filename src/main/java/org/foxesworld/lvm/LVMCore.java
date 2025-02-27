@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 public class LVMCore extends AnimationWebView implements AnimationController {
 
     private static final Logger logger = LoggerFactory.getLogger(LVMCore.class);
+    protected String animPath;
 
     public LVMCore(LottieAnimationConfig config) {
         super(config);
@@ -23,6 +24,17 @@ public class LVMCore extends AnimationWebView implements AnimationController {
         super.setAnimationCallback(callback);
     }
 
+    public void loadAnimation(String animationUri) {
+        this.animPath = animationUri;
+        getConfig().setAnimationJsonResourcePath(animationUri);
+        try {
+            String htmlContent = getHtmlContentBuilder().buildHtmlContent(getConfig());
+            getWebView().getEngine().loadContent(htmlContent);
+        } catch (Exception e) {
+            logger.error("Failed to load animation", e);
+            throw new RuntimeException("Failed to load animation", e);
+        }
+    }
     @Override
     public void play() {
         logger.debug("Playing animation.");

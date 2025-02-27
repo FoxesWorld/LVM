@@ -1,0 +1,42 @@
+.video-slider .track {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 5px;
+    -fx-min-height: 6px;
+    -fx-max-height: 6px;
+}
+
+.video-slider .thumb {
+    -fx-background-color: #0078d7;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 14px;
+    -fx-pref-height: 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 2, 0.0, 0, 1);
+}
+
+/* Убираем стандартные эффекты при наведении */
+.video-slider .thumb:hover {
+    -fx-background-color: #005fa3;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #4CAF50, #2E7D32);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #1B5E20;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #66BB6A, #388E3C);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #1B5E20, #388E3C);
+    -fx-translate-y: 2px;
+}

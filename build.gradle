@@ -60,17 +60,16 @@ javafx {
 }
 
 dependencies {
-    implementation 'org.graalvm.sdk:graal-sdk:22.3.0'
+    //implementation 'org.graalvm.sdk:graal-sdk:22.3.0'
 
     implementation "org.openjfx:javafx-controls:17.0.2"
     implementation "org.openjfx:javafx-web:23.0.1"
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.11.0'
 
-    implementation 'org.graalvm.truffle:truffle-api:22.3.0'
+    //implementation 'org.graalvm.truffle:truffle-api:22.3.0'
     implementation 'org.freemarker:freemarker:2.3.32'
-
-    // Если используете Graal.js
-    implementation 'org.graalvm.js:js:22.3.0'
+    //implementation 'org.graalvm.js:js:22.3.0'
+    implementation 'org.controlsfx:controlsfx:11.2.0'
     implementation 'org.fusesource.jansi:jansi:2.4.0'
     implementation 'org.slf4j:slf4j-api:2.0.9'
     implementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0'
