@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.controlsfx.glyphfont.FontAwesome;
@@ -42,7 +43,7 @@ public class LottieDemoApp extends Application implements AnimationCallback {
             config.setRenderer("svg");
             config.setLoop(true);
             config.setAutoplay(true);
-            lvmCore = new LVMCore(config);
+            lvmCore = new LVMCore(config, new WebView());
             lvmCore.setAnimationCallback(this);
             HBox buttonBox = createControlButtons(primaryStage);
             Slider animationSlider = createAnimationSlider();

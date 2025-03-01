@@ -16,21 +16,30 @@ public class AnimationWebView extends Region {
     private static final String DEFAULT_HTML_TEMPLATE_PATH = "html/content.html";
 
     private final SoundPlayer soundPlayer;
-    private final WebView webView;
+    private WebView webView; // убрали final, чтобы можно было задать внешний экземпляр
     private LottieAnimationConfig config;
     private final HtmlContentBuilder htmlContentBuilder;
 
-    public AnimationWebView(LottieAnimationConfig config) {
+    // Конструктор, который принимает внешний WebView (если он передан, используем его)
+    public AnimationWebView(LottieAnimationConfig config, WebView externalWebView) {
         if (config == null) throw new IllegalArgumentException("LottieAnimationConfig must not be null");
         this.config = config;
         this.soundPlayer = new SoundPlayer();
-        this.webView = new WebView();
-
+        if (externalWebView != null) {
+            this.webView = externalWebView;
+        } else {
+            this.webView = new WebView();
+        }
         this.htmlContentBuilder = new HtmlContentBuilder(DEFAULT_HTML_TEMPLATE_PATH);
-        getChildren().add(webView);
-        webView.prefWidthProperty().bind(widthProperty());
-        webView.prefHeightProperty().bind(heightProperty());
+        getChildren().add(this.webView);
+        this.webView.prefWidthProperty().bind(widthProperty());
+        this.webView.prefHeightProperty().bind(heightProperty());
         loadAnimation(this.config.getAnimationJsonResourcePath());
+    }
+
+    // Сохраняем прежний конструктор для обратной совместимости
+    public AnimationWebView(LottieAnimationConfig config) {
+        this(config, null);
     }
 
     protected void loadAnimation(String animationUri) {
@@ -108,10 +117,6 @@ public class AnimationWebView extends Region {
         }
     }
 
-    /**
-     * Устанавливает прогресс анимации.
-     * @param progress значение от 0 до 1, где 0 - начало, 1 - конец анимации.
-     */
     public void setAnimationProgress(float progress) {
         if (progress < 0) progress = 0;
         if (progress > 1) progress = 1;
@@ -127,7 +132,6 @@ public class AnimationWebView extends Region {
             logger.error("Failed to set animation progress", e);
         }
     }
-
 
     public WebView getWebView() {
         return webView;

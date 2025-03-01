@@ -5,30 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90381b08-1424-4d01-9afd-c531d0dda6d0" name="Changes" comment="1.4.1 Fixes&amp;Improvements">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/LottieDemoApp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/LottieDemoApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/LottieDemoApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/config/LottieAnimationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/config/LottieAnimationConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/view/AnimationWebView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/view/AnimationWebView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/html/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/html/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/LVM" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/LVM" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/LVM.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/LVM.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/LottieDemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/LottieDemoApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/LVMCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/LVMCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/config/LottieAnimationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/config/LottieAnimationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/view/AnimationWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/view/AnimationWebView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/css/video-slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/css/video-slider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/html/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/html/content.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +104,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Calista/Documents/GitHub/LVM/src/main/resources/assets/anim&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Calista/Documents/GitHub/Loader&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -136,7 +131,7 @@
       <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\anim\" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LottieDemoApp">
+  <component name="RunManager" selected="Gradle.LVM [build]">
     <configuration name="LottieDemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.foxesworld.LottieDemoApp" />
       <module name="LVM.main" />
@@ -213,6 +208,11 @@
       <workItem from="1740661560409" duration="3472000" />
       <workItem from="1740665217226" duration="71000" />
       <workItem from="1740665302828" duration="113000" />
+      <workItem from="1740742190130" duration="58000" />
+      <workItem from="1740757866426" duration="94000" />
+      <workItem from="1740758140645" duration="78000" />
+      <workItem from="1740820652250" duration="123000" />
+      <workItem from="1740821043516" duration="120000" />
     </task>
     <task id="LOCAL-00001" summary="1.0.0">
       <option name="closed" value="true" />

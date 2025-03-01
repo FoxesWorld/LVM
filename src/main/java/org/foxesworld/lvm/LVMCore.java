@@ -5,13 +5,16 @@ import org.foxesworld.lvm.event.AnimationCallback;
 import org.foxesworld.lvm.view.AnimationWebView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import javafx.scene.web.WebView;
 
 public class LVMCore extends AnimationWebView implements AnimationController {
 
     private static final Logger logger = LoggerFactory.getLogger(LVMCore.class);
     protected String animPath;
-    public LVMCore(LottieAnimationConfig config) {
-        super(config);
+
+    // Новый конструктор, принимающий WebView, полученный из FXML
+    public LVMCore(LottieAnimationConfig config, WebView externalWebView) {
+        super(config, externalWebView);
     }
 
     @Override
@@ -29,11 +32,13 @@ public class LVMCore extends AnimationWebView implements AnimationController {
         try {
             String htmlContent = getHtmlContentBuilder().buildHtmlContent(getConfig());
             getWebView().getEngine().loadContent(htmlContent);
+            logger.debug("Animation content loaded into WebView.");
         } catch (Exception e) {
             logger.error("Failed to load animation", e);
             throw new RuntimeException("Failed to load animation", e);
         }
     }
+
     @Override
     public void play() {
         logger.debug("Playing animation.");
