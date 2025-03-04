@@ -4,26 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90381b08-1424-4d01-9afd-c531d0dda6d0" name="Changes" comment="1.4.1 Fixes&amp;Improvements">
+    <list default="true" id="90381b08-1424-4d01-9afd-c531d0dda6d0" name="Changes" comment="1.5.2 Production">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/anim/donwload.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/anim/error.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/anim/start.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/anim/success.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/anim/unpack.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/anim/wait.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/LottieDemoApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/LottieDemoApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/config/LottieAnimationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/config/LottieAnimationConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/view/AnimationWebView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/view/AnimationWebView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/scripts/LVM" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/LVM" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/scripts/LVM.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/LVM.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/ai.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/discord-button.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/menu/menu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/menu/menuV4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/naviad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/notification/bell-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/notification/bell.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/notification/notification.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/settings/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/settings/settings.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/html/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/html/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/js/lottie.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/LottieDemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/LottieDemoApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/LVMCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/LVMCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/config/LottieAnimationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/config/LottieAnimationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/view/AnimationWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/view/AnimationWebView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/html/HtmlContentBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/html/HtmlContentBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/html/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/html/content.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +115,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;java8&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Calista/Documents/GitHub/Loader&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -112,6 +124,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -124,8 +137,8 @@
       <recent name="C:\Users\Calista\Documents\GitHub\LVM" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\js" />
       <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\anim" />
+      <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\js" />
       <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\sounds" />
       <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\html" />
       <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\anim\" />
@@ -213,6 +226,14 @@
       <workItem from="1740758140645" duration="78000" />
       <workItem from="1740820652250" duration="123000" />
       <workItem from="1740821043516" duration="120000" />
+      <workItem from="1740822759399" duration="210000" />
+      <workItem from="1740824036091" duration="33000" />
+      <workItem from="1740831339088" duration="60000" />
+      <workItem from="1740831530695" duration="70000" />
+      <workItem from="1740832787229" duration="75000" />
+      <workItem from="1740833107989" duration="37000" />
+      <workItem from="1740899372481" duration="201000" />
+      <workItem from="1741074470401" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="1.0.0">
       <option name="closed" value="true" />
@@ -270,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740474285396</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1.5.2 Production">
+      <option name="closed" value="true" />
+      <created>1740822947216</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740822947216</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +324,7 @@
     <MESSAGE value="1.3.0 Sounds and Fixes" />
     <MESSAGE value="1.4.0 Fixes&amp;Improvements" />
     <MESSAGE value="1.4.1 Fixes&amp;Improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.4.1 Fixes&amp;Improvements" />
+    <MESSAGE value="1.5.2 Production" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.5.2 Production" />
   </component>
 </project>
