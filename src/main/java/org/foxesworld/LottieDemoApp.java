@@ -37,7 +37,7 @@ public class LottieDemoApp extends Application implements AnimationCallback {
         logger.info("Initializing LottieDemoApp...");
         try {
             LottieAnimationConfig config = new LottieAnimationConfig();
-            config.setAnimationJsonResourcePath("/anim/ok.json");
+            config.setAnimationJsonResourcePath("/anim/wait.json");
             config.setContainerId("lottieContainer");
             config.setRenderer("svg");
             config.setLoop(true);

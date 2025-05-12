@@ -1,6 +1,6 @@
 package org.foxesworld.lvm.config;
 public class LottieAnimationConfig {
-    private final String bodymovinJsResourcePath;
+    private String bodymovinJsResourcePath;
     private String animationJsonResourcePath;
     private String containerId;
     private String renderer;
@@ -55,7 +55,12 @@ public class LottieAnimationConfig {
         return autoplay;
     }
 
+    public void setBodymovinJsResourcePath(String bodymovinJsResourcePath) {
+        this.bodymovinJsResourcePath = bodymovinJsResourcePath;
+    }
+
     public void setAutoplay(boolean autoplay) {
         this.autoplay = autoplay;
     }
+
 }

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90381b08-1424-4d01-9afd-c531d0dda6d0" name="Changes" comment="1.4.1 Fixes&amp;Improvements">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/LottieDemoApp.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/checksums/sha1-checksums.bin" afterDir="false" />
@@ -15,20 +15,37 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/LottieDemoApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/LottieDemoApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/view/AnimationWebView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/foxesworld/lvm/view/AnimationWebView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/html/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/html/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/ai.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/discord-button.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/menu/menu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/menu/menuV4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/naviad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/notification/bell-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/notification/bell.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/notification/notification.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/settings/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/settings/settings.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/anim/test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/LVM" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/LVM" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/LVM.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/LVM.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/LottieDemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/LottieDemoApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/LVMCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/LVMCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/view/AnimationWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/foxesworld/lvm/view/AnimationWebView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/css/video-slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/css/video-slider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/html/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/html/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/ai.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/dinosaur.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/discord-button.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/fox.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/menu/menu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/menu/menuV4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/naviad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/notification/bell-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/notification/bell.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/notification/notification.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/ok.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/settings/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/settings/settings.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/anim/test.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +126,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Calista/Documents/GitHub/LVM/src/main/resources/assets/anim&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Aiden/Documents/GitHub/Loader&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -129,14 +146,14 @@
       <recent name="C:\Users\Calista\Documents\GitHub\LVM" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aiden\Documents\GitHub\LVM\src\main\resources\assets" />
       <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\js" />
       <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\anim" />
       <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\sounds" />
       <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\html" />
-      <recent name="C:\Users\Calista\Documents\GitHub\LVM\src\main\resources\assets\anim\" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LottieDemoApp">
+  <component name="RunManager" selected="Gradle.LVM [build]">
     <configuration name="LottieDemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.foxesworld.LottieDemoApp" />
       <module name="LVM.main" />
@@ -182,7 +199,6 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -213,6 +229,8 @@
       <workItem from="1740661560409" duration="3472000" />
       <workItem from="1740665217226" duration="71000" />
       <workItem from="1740665302828" duration="113000" />
+      <workItem from="1741593011089" duration="42000" />
+      <workItem from="1747026498305" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="1.0.0">
       <option name="closed" value="true" />
